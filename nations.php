@@ -1,6 +1,7 @@
 <?php
 
 libxml_use_internal_errors(true);
+ini_set("allow_url_fopen", true);
 header('Content-Type: application/csv');
 
 $alliance = $_GET['alliance'];
