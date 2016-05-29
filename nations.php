@@ -1,9 +1,7 @@
 <?php
 
 libxml_use_internal_errors(true);
-header("content-type: application/force-download");
 header('Content-Type: application/csv');
-header('Pragma: no-cache');
 
 $alliance = $_GET['alliance'];
 $result = "";
