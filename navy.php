@@ -16,7 +16,7 @@ header("Content-type: text/plain");
 //print_r($nodes);
 
 foreach($nodes as $node) {
-echo $node->nodeValue . "\r\n";
+echo "NationId " . $nationid . " currently has " . $node->nodeValue . " ships \r\n";
 };
 
 
