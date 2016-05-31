@@ -1,6 +1,7 @@
 <?php
 
 libxml_use_internal_errors(true);
+header("Content-Type: text/plain");
 
 $alliance = $_GET['alliance'];
 $result = "";
