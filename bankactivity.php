@@ -12,9 +12,6 @@ foreach ($nations as $nt) {
     if (strtoupper($nt->alliance) === strtoupper ($alliance)) {
         GetBankSummary($nt->nationid);
    }};
-   
-
-  GetBankSummary("30214");
   
 
 function GetBankSummary($nation) {
