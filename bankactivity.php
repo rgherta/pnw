@@ -5,13 +5,16 @@ $alliance = $_GET['alliance'];
 $json = file_get_contents('https://politicsandwar.com/api/nations/');
 $resarray= json_decode($json);
 $nations = $resarray->nations;
+$transactions = "";
 
-echo Getheader();
+$transactions = $transactions . Getheader();
 
 foreach ($nations as $nt) {
     if (strtoupper($nt->alliance) === strtoupper ($alliance)) {
-        GetBankSummary($nt->nationid);
+        $transactions = $transactions . GetBankSummary($nt->nationid);
    }};
+   
+  echo $transactions;
   
 
 function GetBankSummary($nation) {
